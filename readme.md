@@ -8,7 +8,7 @@ This tool configures babel, react intl and babel-plugin-react-intl and offers a 
 
 ## Install
 
-`npm i https://github.com/alefalezza/react-intl-extract`
+`npm i react-intl-extract`
 
 ## Usage
 
