@@ -1,6 +1,7 @@
 const program = require('commander');
 const config = require('./src/config');
 const _ = require('lodash');
+const version = require('./package.json').version;
 
 program
   .version(version, '-v, --version')

@@ -4,8 +4,9 @@ const babel = require('@babel/core');
 const manageTranslations = require('react-intl-translations-manager').default;
 const rimraf = require('rimraf');
 const generateIndex = require('./generateIndex');
+const log = console.log;
 
-const tmp = join('../', '.tmp');
+const tmp = join(__dirname, '../', '.tmp');
 
 const extensions = ['jsx', 'tsx'];
 
@@ -15,12 +16,11 @@ const globOptions = (src) => ({
 
 const babelOptions = (src) => ({
   cwd: src,
-  plugins: [[
-    "react-intl",
-    {
+  plugins: [
+    ["react-intl", {
       "messagesDir": tmp
-    }
-  ]],
+    }]
+  ],
   presets: [
     "@babel/typescript",
     "@babel/react"
@@ -28,7 +28,7 @@ const babelOptions = (src) => ({
 });
 
 module.exports = (options) => {
-  console.log('Extracting i18n messages');
+  log('Extracting i18n messages');
   const { locales, src, output } = options;
   const files = findFiles(src);
   extractMessages(locales, src, output)(files);
@@ -38,34 +38,33 @@ const findFiles = (src) => {
   const output = [];
   extensions.forEach(ext => {
     const files = glob.sync(`/**/*.${ext}`, globOptions(src));
-    output.concat(files);
-  })
+    output.push(...files);
+  });
   return output;
 };
-
 
 /**
  * @param {string[]} files 
  */
 const extractMessages = (locales, src, output) => (files) => {
-  console.log('Saving tmp messages');
+  log('Saving tmp messages');
   files.map(file => babel.transformFileSync(file, babelOptions(src)));
 
-  console.log('Updating translations');
+  log('Updating translations');
   manageTranslations({
     messagesDirectory: tmp,
     translationsDirectory: output,
     languages: locales
   });
 
-  console.log('Generating index');
+  log('Generating index');
   generateIndex(locales, output);
 
-  console.log('Cleaning');
+  log('Cleaning');
   rimraf(tmp, (err) => {
     if (err) {
       throw err;
     }
-    console.log('Done!');
+    log('Done!');
   });
 };
