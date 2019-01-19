@@ -3,10 +3,14 @@ const config = require('./src/config');
 const _ = require('lodash');
 const version = require('./package.json').version;
 
+function list(val) {
+  return val.split(',');
+}
+
 program
   .version(version, '-v, --version')
   .allowUnknownOption()
-  .option('-l,--locales <items>', 'list of output languages, default en,it')
+  .option('-l,--locales <items>', 'list of output languages, default en,it', list)
   .option('-s,--src [value]', 'source directory, default /src')
   .option('-o,--output [value]', 'output directory: where dictionaries are saved, default /locales')
   .parse(process.argv);
