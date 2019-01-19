@@ -1,6 +1,6 @@
 {
   "name": "react-intl-extract",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Extracts strings from react and creates dictionaries",
   "main": "index.js",
   "bin": {
