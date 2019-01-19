@@ -1,0 +1,27 @@
+{
+  "name": "intl-extract",
+  "version": "1.0.0",
+  "description": "simple script\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D A \u001b[2~s\u001bExtracts strings from react and creates dictionaries",
+  "main": "index.js",
+  "bin": {
+    "intl-extract": "./bin/intl-extract.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alessandro falezza",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.1.0",
+    "babel-plugin-react-intl": "^3.0.1",
+    "commander": "^2.19.0",
+    "glob": "^7.1.3",
+    "lodash": "^4.17.11",
+    "react-intl": "^2.8.0",
+    "react-intl-translations-manager": "^5.0.3",
+    "rimraf": "^2.6.3"
+  }
+}
