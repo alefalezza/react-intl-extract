@@ -28,7 +28,7 @@ const babelOptions = (src) => ({
 });
 
 module.exports = (options) => {
-  log('Extracting i18n messages');
+  log(`Extracting i18n messages from ${options.src}`);
   const { locales, src, output } = options;
   const files = findFiles(src);
   extractMessages(locales, src, output)(files);
