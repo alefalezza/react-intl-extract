@@ -1,10 +1,10 @@
 {
   "name": "intl-extract",
   "version": "1.0.0",
-  "description": "simple script\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D A \u001b[2~s\u001bExtracts strings from react and creates dictionaries",
+  "description": "Extracts strings from react and creates dictionaries",
   "main": "index.js",
   "bin": {
-    "intl-extract": "./bin/intl-extract.js"
+    "react-intl-extract": "./bin/react-intl-extract.js"
   },
   "scripts": {
     "start": "node cli.js",
