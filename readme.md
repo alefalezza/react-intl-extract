@@ -1,8 +1,8 @@
-# Intl extract
+# Intl extract from `<FormattedMessage>` to json dictionary
 
 This is a command line tool to help extracting dictionaries from react-intl apps written in es6 and typescript.
 
-If your app is internationalized using `react-intl`, you use the component `<FormattedMessage>` (and other react-intl components) for i18n strings.
+If your app is internationalized using [`react-intl`](https://github.com/yahoo/react-intl), you use the component `<FormattedMessage>` (and other react-intl components) for i18n strings.
 
 This tool configures babel, react intl and babel-plugin-react-intl and offers a simple command to manage your app's dictionaries.
 
