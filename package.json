@@ -1,6 +1,6 @@
 {
   "name": "react-intl-extract",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Extracts strings from react and creates dictionaries",
   "homepage": "https://github.com/alefalezza/react-intl-extract",
   "repository": {
