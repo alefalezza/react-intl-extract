@@ -56,6 +56,23 @@ extract({
 });
 ```
 
+## Known problems
+
+This module extracts only the `<FormattedMessage>` and `<FormattedHTMLMessage>` jsx tags, and the `defineMessages()` function, as [you can see here](https://github.com/yahoo/babel-plugin-react-intl/blob/master/src/index.js).
+
+This is reported also [in the react-intl issues](https://github.com/yahoo/babel-plugin-react-intl/issues).
+
+### workaround
+
+If you need to use a string, as example in a prop, use this form:
+
+```javascript
+<Tag prop={(
+  () => <FormattedMessage id='' defaultMessage='' />
+  )()} ></Tab>
+```
+
+
 # Thanks
 
 - [react](https://reactjs.org/)
