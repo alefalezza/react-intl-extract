@@ -1,6 +1,6 @@
 {
   "name": "react-intl-extract",
-  "version": "1.0.4-canary.0",
+  "version": "1.0.4-canary.1",
   "description": "Extracts strings from react and creates dictionaries",
   "homepage": "https://github.com/alefalezza/react-intl-extract",
   "repository": {
@@ -16,6 +16,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "alessandro falezza",
+  "contributors": [
+    {
+      "name": "Ryan Peterson"
+    }
+  ],
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.2.2",
