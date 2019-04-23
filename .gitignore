@@ -82,3 +82,4 @@ typings/
 # Project files
 locales
 bin
+.DS_Store
