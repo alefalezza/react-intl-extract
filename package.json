@@ -1,5 +1,5 @@
 {
-  "name": "react-intl-extract",
+  "name": "@rpeterson/react-intl-extract",
   "version": "1.0.4-canary.1",
   "description": "Extracts strings from react and creates dictionaries",
   "homepage": "https://github.com/alefalezza/react-intl-extract",
@@ -13,6 +13,7 @@
   },
   "scripts": {
     "start": "node cli.js",
+    "build": "parcel build --no-source-maps -o react-intl-extract.js -d bin cli.js ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "alessandro falezza",
