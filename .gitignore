@@ -78,3 +78,8 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+# Project files
+locales
+bin
+.DS_Store

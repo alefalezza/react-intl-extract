@@ -20,6 +20,7 @@ This tool configures babel, react intl and babel-plugin-react-intl and offers a 
 
 - `-l` (`--locales`): list of languages, it will produce a dictionary for every language, comma separated (deafult: `en,it`)
 - `-s` (`--src`): source directory, where your `.jsx|.tsx` files are located (default `${cwd}/src`)
+- `-e` (`--extensions`): file extensions, a csv list of extensions to extract from (default 'jsx,tsx')
 - `-o` (`--output`): destination directory, where your dictionaries will be saved (default `${cwd}/locales`)
 - `-v` (`--version`): shows script version
 - `-h` (`--help`): shows available options

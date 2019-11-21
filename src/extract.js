@@ -8,8 +8,6 @@ const log = console.log;
 
 const tmp = join(__dirname, '../', '.tmp');
 
-const extensions = ['jsx', 'tsx'];
-
 const globOptions = (src) => ({
   root: src
 });
@@ -29,12 +27,12 @@ const babelOptions = (src) => ({
 
 module.exports = (options) => {
   log(`Extracting i18n messages from ${options.src}`);
-  const { locales, src, output } = options;
-  const files = findFiles(src);
+  const { locales, src, output, extensions } = options;
+  const files = findFiles(src, extensions);
   extractMessages(locales, src, output)(files);
 };
 
-const findFiles = (src) => {
+const findFiles = (src, extensions) => {
   const output = [];
   extensions.forEach(ext => {
     const files = glob.sync(`/**/*.${ext}`, globOptions(src));

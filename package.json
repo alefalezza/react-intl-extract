@@ -1,6 +1,6 @@
 {
-  "name": "react-intl-extract",
-  "version": "1.0.4",
+  "name": "@rpeterson/react-intl-extract",
+  "version": "1.0.5",
   "description": "Extracts strings from react and creates dictionaries",
   "homepage": "https://github.com/alefalezza/react-intl-extract",
   "repository": {
@@ -9,31 +9,45 @@
   },
   "main": "index.js",
   "bin": {
-    "react-intl-extract": "./bin/react-intl-extract.js"
+    "react-intl-extract": "./bin/react-intl-extract"
   },
   "scripts": {
     "start": "node cli.js",
+    "build": "nexe cli.js -o bin/react-intl-extract --clean",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "alessandro falezza",
+  "contributors": [
+    {
+      "name": "Ryan Peterson"
+    }
+  ],
   "license": "ISC",
   "dependencies": {
-    "@babel/core": "^7.2.2",
+    "@babel/core": "^7.4.3",
     "@babel/plugin-proposal-export-default-from": "^7.2.0",
     "@babel/preset-react": "^7.0.0",
-    "@babel/preset-typescript": "^7.1.0",
+    "@babel/preset-typescript": "^7.3.3",
     "babel-plugin-react-intl": "^3.0.1",
-    "commander": "^2.19.0",
+    "commander": "^2.20.0",
     "glob": "^7.1.3",
     "lodash": "^4.17.11",
+    "nexe": "^3.1.0",
     "react-intl": "^2.8.0",
     "react-intl-translations-manager": "^5.0.3",
     "rimraf": "^2.6.3"
   },
   "files": [
-    "index.js",
-    "cli.js",
-    "bin/**/*",
-    "src/**/*"
-  ]
+    "bin/react-intl-extract"
+  ],
+  "babel": {
+    "presets": [
+      "module:@babel/preset-react",
+      "module:@babel/preset-typescript"
+    ],
+    "plugins": [
+      "module:@babel/plugin-proposal-export-default-from",
+      "module:babel-plugin-react-intl"
+    ]
+  }
 }
